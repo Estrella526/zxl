@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字选择记录系统</title>
+    <link rel="stylesheet" href="css/new_file.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">数字选择记录系统</h1>
+        
+        <div class="control-panel">
+            <div class="current-period-info">
+                <span>当前期数: <span id="currentPeriod">1</span></span>
+                <span class="period-note">(每期最多可选33个数字)</span>
+            </div>
+            <div class="button-group">
+                <button class="btn" id="resetBtn">重置当前选择</button>
+                <button class="btn btn-confirm" id="confirmBtn">确认本期选择</button>
+                <button class="btn" id="newPeriodBtn">开始下一期</button>
+            </div>
+        </div>
+        
+        <div class="selection-area">
+            <h2 class="section-title">请选择数字 (点击数字进行选择/取消)</h2>
+            <div class="eleven-row-grid" id="selectionGrid">
+                <!-- 数字1-33将通过JavaScript生成，每行11个，共3行 -->
+            </div>
+            
+            <div class="selection-info">
+                <p>已选择 <span id="selectedCount">0</span> 个数字: <span id="selectedNumbers">无</span></p>
+            </div>
+        </div>
+        
+        <div class="record-area">
+            <h2 class="section-title">期数记录表</h2>
+            <div class="compact-periods-container" id="periodsContainer">
+                <!-- 期数记录将通过JavaScript生成 -->
+            </div>
+            
+            <div class="instructions">
+                <p><strong>使用说明：</strong></p>
+                <ol>
+                    <li>点击上方数字进行选择/取消选择（每期最多可选33个数字）</li>
+                    <li>点击"确认本期选择"将当前选择的数字保存到当前期数中</li>
+                    <li>点击"开始下一期"将进入下一期选择</li>
+                    <li>点击"重置当前选择"将清空当前期数已选择的数字</li>
+                    <li>每期选择将记录在下方对应的期数方格中</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/new_file.js"></script>
+</body>
+</html>
